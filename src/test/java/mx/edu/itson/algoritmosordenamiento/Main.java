@@ -52,6 +52,18 @@ AlgoritmosOrdenamiento.insertionSort(arr3);
 System.out.print("Estado Final:    ");
 AlgoritmosOrdenamiento.imprimirArreglo(arr3);
 
+// -------------- QUICK SORT ---------------
+int[] arr4 = {8,3,2,5,6};
+
+System.out.println("========================================");
+System.out.println("          ALGORITMO: QUICKSORT     ");
+
+System.out.print("Estado Inicial:  ");
+AlgoritmosOrdenamiento.imprimirArreglo(arr4);
+AlgoritmosOrdenamiento.quickSort(arr4);
+
+System.out.print("Estado Final:    ");
+AlgoritmosOrdenamiento.imprimirArreglo(arr4);
         
     }
     

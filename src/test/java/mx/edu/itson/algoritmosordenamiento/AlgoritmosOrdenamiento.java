@@ -76,6 +76,43 @@ public class AlgoritmosOrdenamiento {
         
     }
     
+    // ---- QUICK SORT ----
+
+public static void quickSort(int[] arr) {
+    if (arr != null && arr.length > 0) {
+        quickSort(arr, 0, arr.length - 1);
+    }
+}
+    public static void quickSort (int [] arr4, int inicio, int fin){
+        
+        if(inicio<fin){
+            int pivoteIndice = particion(arr4, inicio, fin);
+            System.out.println("Izquierda");
+            quickSort(arr4, inicio, pivoteIndice -1); //lado izquierdo
+            System.out.println("Derecha");
+            quickSort(arr4, pivoteIndice + 1, fin); //lado derecho
+            
+        }
+    }
+    public static int particion(int[] arr4, int inicio, int fin){
+        int pivote = arr4[fin];
+        int i = inicio -1;
+        for (int j = inicio; j < fin; j++){
+            if(arr4[j]<pivote){
+                i++;
+                
+                int temp = arr4[i];
+                arr4[i] = arr4[j];
+                arr4[j] = temp;
+            }
+        }
+        int temp = arr4[i + 1];
+        arr4[i+1] = arr4[fin];
+        arr4[fin] = temp;
+        return i + 1;
+    }
+    
+    
     //metodo para imprimir freson
     public static void imprimirArreglo(int[] arr) {
     System.out.print("[ ");
